@@ -6,8 +6,6 @@
 
 **Techs:** JavaEE7 (Jsp + Servlet), SQLServer, netbeans, Paypal integration, Authentication integration (Google)
 
-**URL:** ...
-
 Manage book:
 
 - CRUD book, update information to database
