@@ -4,7 +4,7 @@
 
 **Brief:** A JavaEE webapp to manage all of book activities, such as: manage book, shopping cart, ... Besides that, manage user in system
 
-**Techs:** JavaEE7(Jsp + Servlet), SQLServer, netbeans, Paypal integration, Authentication integration (Google)
+**Techs:** JavaEE7 (Jsp + Servlet), SQLServer, netbeans, Paypal integration, Authentication integration (Google)
 
 **URL:** ...
 
