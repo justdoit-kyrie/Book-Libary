@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        
+        <!-- Link Bootstrap 4 [CSS] -->
+        <link 
+            rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+            crossorigin="anonymous"/>
+        
+        <style>
+            body {
+                background-color: #fff;
+            }
+
+            .login-block {
+                height: 100vh;
+            }
+
+            .flex{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .login-block .auth-box {
+                margin: 20px auto 0;
+                max-width: 450px !important;
+            }
+
+            .card {
+                border-radius: 5px;
+                -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+                border: none;
+                margin-bottom: 30px;
+                -webkit-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+                background-color: #fff;
+                height: 850px;
+            }
+
+            .card .card-block {
+                padding: 1.25rem
+            }
+
+            .f-80 {
+                font-size: 80px
+            }
+
+            .form-group {
+                margin-bottom: 1.25em
+            }
+
+            .form-material .form-control {
+                display: inline-block;
+                height: 43px;
+                width: 100%;
+                border: none;
+                border-radius: 0;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 9px;
+                background-color: transparent;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border-bottom: 1px solid #ccc
+            }
+
+            .btn-md {
+                padding: 10px 16px;
+                font-size: 15px;
+                line-height: 23px
+            }
+
+            .btn-primary {
+                background-color: #4099ff;
+                border-color: #4099ff;
+                color: #fff;
+                cursor: pointer;
+                -webkit-transition: all ease-in .3s;
+                transition: all ease-in .3s
+            }
+
+            .btn {
+                border-radius: 2px;
+                text-transform: capitalize;
+                font-size: 15px;
+                padding: 10px 19px;
+                cursor: pointer
+            }
+
+            .m-b-20 {
+                margin-bottom: 20px
+            }
+
+            .btn-md {
+                padding: 10px 16px;
+                font-size: 15px;
+                line-height: 23px;
+                margin: 30px 0;
+            }
+
+            .heading {
+                font-size: 21px;
+                margin: 20px 0 10px;
+            }
+
+            #infoMessage p {
+                color: red !important
+            }
+
+            .btn-google {
+                color: #545454;
+                background-color: #ffffff;
+                box-shadow: 0 1px 2px 1px #ddd
+            }
+
+            .or-container {
+                align-items: center;
+                color: #ccc;
+                display: flex;
+                margin: 25px 0
+            }
+
+            .line-separator {
+                background-color: #ccc;
+                flex-grow: 5;
+                height: 1px
+            }
+
+            .or-label {
+                flex-grow: 1;
+                margin: 0 15px;
+                text-align: center
+            }
+        </style>
+        <script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+    </head>
+    <body>
+        <section class="login-block flex">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <form class="md-float-material form-material" action="MainController" method="POST">
+                            <div class="auth-box card">
+                                <div class="card-block">
+                                    <div class="row my-4">
+                                        <div class="col-md-12">
+                                            <div class="flex">
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Zicm-h82HMPRI2TCCAyPydgLM_pubP2qWQ&usqp=CAU" alt="Security Image"/>
+                                            </div>
+                                            <h3 class="heading">Required Login</h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-primary"> <input type="text" class="form-control" name="userID" placeholder="UserID" id="userID"> </div>
+                                    <div class="form-group form-primary"> <input type="password" class="form-control" name="password" placeholder="Password" id="password"> </div>
+                                    <div class="row">
+                                        <div class="col-md-12"> 
+                                            <input type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" name="action" value="Sign Up">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin: 0 50px">
+                                        <div class="g-recaptcha"
+                                             data-sitekey="6Lf7AFQbAAAAAL3N0nzly2i7Cl7RhLEjJbNES-WL"></div>
+                                    </div>
+                                    <div class="or-container">
+                                        <div class="line-separator"></div>
+                                        <div class="or-label">or</div>
+                                        <div class="line-separator"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a 
+                                                class="btn btn-lg btn-google btn-block text-uppercase btn-outline" 
+                                                href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8084/AssignMent_SE151198/login-google&response_type=code&client_id=818830215350-0c43v4923het7uuauabllumbiavbt1e3.apps.googleusercontent.com&approval_prompt=force">
+                                                <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Icon">Signup Using Google
+                                            </a>
+                                        </div>
+                                    </div><br/>
+                                    <p class="text-inverse text-center">Already have an account? <a href="createAccount.jsp">Sign In</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Link Bootstrap 4 [JS] -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
