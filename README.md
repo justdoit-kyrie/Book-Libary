@@ -20,4 +20,4 @@ Shopping cart:
 - Add book to cart, when view cart will append this book's information in cart
 - **Check out:** create a bill, send email the information of bill
 
-### © 2021 Nguyễn Dương Minh Đức | justdoit-kyrie
+### &copy; 2021 Nguyễn Dương Minh Đức | justdoit-kyrie
